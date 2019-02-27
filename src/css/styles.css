@@ -73,6 +73,9 @@ input {
   font-family: "Exo2-Regular";
   font-size: 16px; }
 
+input[type="checkbox"] {
+  display: none; }
+
 .container {
   display: flex;
   position: relative;
@@ -92,52 +95,45 @@ input {
     position: relative;
     width: 100%;
     height: 10vh; }
-
-.logo {
-  position: absolute;
-  left: -18px; }
-
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 500px; }
-
-.menu__item {
-  font-family: "Oswald-Regular", sans-serif;
-  font-size: 16px;
-  margin-left: 40px; }
-  .menu__item a:hover {
-    color: #787d89;
-    webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out; }
-
-.menu__item:nth-child(6) {
-  margin-left: 53px; }
-
-.menu__item:nth-child(7) {
-  margin-left: 85px; }
-
-.contacts {
-  display: flex;
-  align-items: center; }
-  .contacts a {
-    margin-left: 20px; }
-    .contacts a svg:hover {
-      fill: #787d89;
-      webkit-transition: all 0.5s ease-out;
-      -moz-transition: all 0.5s ease-out;
-      -ms-transition: all 0.5s ease-out;
-      -o-transition: all 0.5s ease-out;
-      transition: all 0.5s ease-out; }
-
-.phone_number {
-  font-family: "Exo2-Medium", sans-serif;
-  font-size: 16px;
-  margin-right: 20px; }
+    #first header .logo {
+      position: absolute;
+      left: -18px; }
+    #first header .menu {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 500px; }
+      #first header .menu li {
+        font-family: "Oswald-Regular", sans-serif;
+        font-size: 16px;
+        margin-left: 40px; }
+        #first header .menu li a:hover {
+          color: #787d89;
+          webkit-transition: all 0.5s ease-out;
+          -moz-transition: all 0.5s ease-out;
+          -ms-transition: all 0.5s ease-out;
+          -o-transition: all 0.5s ease-out;
+          transition: all 0.5s ease-out; }
+      #first header .menu li:nth-child(6) {
+        margin-left: 53px; }
+      #first header .menu li:nth-child(7) {
+        margin-left: 85px; }
+    #first header .contacts {
+      display: flex;
+      align-items: center; }
+      #first header .contacts a {
+        margin-left: 20px; }
+        #first header .contacts a svg:hover {
+          fill: #787d89;
+          webkit-transition: all 0.5s ease-out;
+          -moz-transition: all 0.5s ease-out;
+          -ms-transition: all 0.5s ease-out;
+          -o-transition: all 0.5s ease-out;
+          transition: all 0.5s ease-out; }
+    #first header .phone_number {
+      font-family: "Exo2-Medium", sans-serif;
+      font-size: 16px;
+      margin-right: 20px; }
 
 .advert {
   display: flex;
@@ -174,14 +170,20 @@ input {
   flex-direction: column;
   background: #fff;
   padding: 40px; }
-  .form span {
-    color: #1e2229;
-    font-family: "Exo2-Bold", sans-serif;
-    font-size: 11px; }
   .form input,
   .form select {
     width: 320px;
     height: 35px; }
+  .form .inputWrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    border: 1px solid #dddedf;
+    padding: 15px 20px; }
+    .form .inputWrap span {
+      color: #1e2229;
+      font-family: "Exo2-Bold", sans-serif;
+      font-size: 11px; }
   .form label {
     font-family: "Exo2-Regular", sans-serif;
     font-size: 16px;
@@ -204,12 +206,6 @@ input {
     width: 30px;
     background: url(../img/check-mark-blue.svg) no-repeat;
     background-size: cover; }
-  .form div {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-    border: 1px solid #dddedf;
-    padding: 15px 20px; }
   .form input[type="submit"] {
     margin-top: 20px;
     background: #2889f0;
@@ -217,21 +213,31 @@ input {
     height: 60px;
     color: #fff;
     cursor: pointer; }
+  .form .confirm_label {
+    padding-top: 20px; }
+    .form .confirm_label span {
+      color: #2889f0; }
+    .form .confirm_label label::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      left: 40px;
+      height: 20px;
+      width: 20px;
+      background: #ebecee; }
+    .form .confirm_label label::after {
+      content: "";
+      position: absolute;
+      left: 40px;
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      background: url(../img/check-mark-blue.svg) no-repeat;
+      background-size: cover; }
+  .form input[type="checkbox"] + label::after {
+    content: none; }
+  .form input[type="checkbox"]:checked + label::after {
+    content: ""; }
 
-.confirm_label::before {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  left: 40px;
-  height: 20px;
-  width: 20px;
-  background: #ebecee; }
-
-input[type="checkbox"] {
-  display: none; }
-
-input[type="checkbox"] + label::after {
-  content: none; }
-
-input[type="checkbox"]:checked + label::after {
-  content: ""; }
+#second {
+  height: 950px; }

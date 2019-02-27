@@ -14,13 +14,13 @@
         <header class="header">
           <a href="#"><img class="logo" src="./img/logo.png" alt="Logo"/></a>
           <ul class="menu">
-            <li class="menu__item"><a href="#">Цены</a></li>
-            <li class="menu__item"><a href="#">Примеры работ</a></li>
-            <li class="menu__item"><a href="#">Расчитать стоимость</a></li>
-            <li class="menu__item"><a href="#">Материалы</a></li>
-            <li class="menu__item"><a href="#">FAQ</a></li>
-            <li class="menu__item"><a href="#">Отзывы</a></li>
-            <li class="menu__item"><a href="#">О нас</a></li>
+            <li><a href="#">Цены</a></li>
+            <li><a href="#">Примеры работ</a></li>
+            <li><a href="#">Расчитать стоимость</a></li>
+            <li><a href="#">Материалы</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">О нас</a></li>
           </ul>
           <div class="contacts">
             <div class="phone__icon">
@@ -200,12 +200,14 @@
           </ul>
         </div>
         <div class="form">
-          <div><span>Имя</span><input type="text" placeholder="Имя" /></div>
-          <div>
+          <div class="inputWrap">
+            <span>Имя</span><input type="text" placeholder="Имя" />
+          </div>
+          <div class="inputWrap">
             <span>Телефон</span
             ><input type="text" placeholder="+7 ___ ___ __ __" />
           </div>
-          <div>
+          <div class="inputWrap">
             <span>Марка авто</span>
             <select>
               <option>Выберите авто</option>
@@ -221,15 +223,15 @@
             >Добавить примечание</label
           >
           <input type="submit" value="Оставить заявку" />
-          <input type="checkbox" id="checkbox_3" /><label
-            class="confirm_label"
-            for="checkbox_3"
-            >Согласен на обработку данных</label
-          >
+          <div class="confirm_label">
+            <input type="checkbox" id="checkbox_3" /><label for="checkbox_3"
+              >Согласен на <span>обработку данных</span></label
+            >
+          </div>
         </div>
       </div>
     </section>
-
+    <section id="second"></section>
     <script src="http://localhost:35729/livereload.js"></script>
   </body>
 </html>

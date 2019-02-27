@@ -1,109 +1,4 @@
-@font-face {
-  font-family: "Oswald-Regular";
-  src: url("../fonts/Oswald-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Oswald-Regular.woff") format("woff"),
-    url("../fonts/Oswald-Regular.ttf") format("truetype"),
-    url("../fonts/Oswald-Regular.svg#Oswald-Regular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Exo2-Medium";
-  src: url("../fonts/Exo2-Medium.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Exo2-Medium.otf") format("opentype"),
-    url("../fonts/Exo2-Medium.woff") format("woff"),
-    url("../fonts/Exo2-Medium.ttf") format("truetype"),
-    url("../fonts/Exo2-Medium.svg#Exo2-Medium") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Oswald-Medium";
-  src: url("../fonts/Oswald-Medium.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Oswald-Medium.woff") format("woff"),
-    url("../fonts/Oswald-Medium.ttf") format("truetype"),
-    url("../fonts/Oswald-Medium.svg#Oswald-Medium") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Exo2-SemiBold";
-  src: url("../fonts/Exo2-SemiBold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Exo2-SemiBold.otf") format("opentype"),
-    url("../fonts/Exo2-SemiBold.woff") format("woff"),
-    url("../fonts/Exo2-SemiBold.ttf") format("truetype"),
-    url("../fonts/Exo2-SemiBold.svg#Exo2-SemiBold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Exo2-Bold";
-  src: url("../fonts/Exo2-Bold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Exo2-Bold.otf") format("opentype"),
-    url("../fonts/Exo2-Bold.woff") format("woff"),
-    url("../fonts/Exo2-Bold.ttf") format("truetype"),
-    url("../fonts/Exo2-Bold.svg#Exo2-Bold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Exo2-Regular";
-  src: url("../fonts/Exo2-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Exo2-Regular.otf") format("opentype"),
-    url("../fonts/Exo2-Regular.woff") format("woff"),
-    url("../fonts/Exo2-Regular.ttf") format("truetype"),
-    url("../fonts/Exo2-Regular.svg#Exo2-Regular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  background: #1e232a;
-}
-
-a,
-a:hover,
-a:active {
-  text-decoration: none;
-  transition: all 0.5s easy;
-  color: #fff;
-}
-
-ul,
-li {
-  display: block;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
-
-select,
-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  border: none;
-  font-family: "Exo2-Regular";
-  font-size: 16px;
-}
+@import "./settings.scss";
 
 .container {
   display: flex;
@@ -125,61 +20,57 @@ input {
     position: relative;
     width: 100%;
     height: 10vh;
-  }
-}
+    .logo {
+      position: absolute;
+      left: -18px;
+    }
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 500px;
+      li {
+        font-family: "Oswald-Regular", sans-serif;
+        font-size: 16px;
+        margin-left: 40px;
 
-.logo {
-  position: absolute;
-  left: -18px;
-}
-
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 500px;
-}
-
-.menu__item {
-  font-family: "Oswald-Regular", sans-serif;
-  font-size: 16px;
-  margin-left: 40px;
-
-  a:hover {
-    color: #787d89;
-    webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
-  }
-}
-
-.menu__item:nth-child(6) {
-  margin-left: 53px;
-}
-.menu__item:nth-child(7) {
-  margin-left: 85px;
-}
-.contacts {
-  display: flex;
-  align-items: center;
-  a {
-    margin-left: 20px;
-    svg:hover {
-      fill: #787d89;
-      webkit-transition: all 0.5s ease-out;
-      -moz-transition: all 0.5s ease-out;
-      -ms-transition: all 0.5s ease-out;
-      -o-transition: all 0.5s ease-out;
-      transition: all 0.5s ease-out;
+        a:hover {
+          color: #787d89;
+          webkit-transition: all 0.5s ease-out;
+          -moz-transition: all 0.5s ease-out;
+          -ms-transition: all 0.5s ease-out;
+          -o-transition: all 0.5s ease-out;
+          transition: all 0.5s ease-out;
+        }
+      }
+      li:nth-child(6) {
+        margin-left: 53px;
+      }
+      li:nth-child(7) {
+        margin-left: 85px;
+      }
+    }
+    .contacts {
+      display: flex;
+      align-items: center;
+      a {
+        margin-left: 20px;
+        svg:hover {
+          fill: #787d89;
+          webkit-transition: all 0.5s ease-out;
+          -moz-transition: all 0.5s ease-out;
+          -ms-transition: all 0.5s ease-out;
+          -o-transition: all 0.5s ease-out;
+          transition: all 0.5s ease-out;
+        }
+      }
+    }
+    .phone_number {
+      font-family: "Exo2-Medium", sans-serif;
+      font-size: 16px;
+      margin-right: 20px;
     }
   }
-}
-.phone_number {
-  font-family: "Exo2-Medium", sans-serif;
-  font-size: 16px;
-  margin-right: 20px;
 }
 
 .advert {
@@ -225,16 +116,25 @@ input {
   flex-direction: column;
   background: #fff;
   padding: 40px;
-  span {
-    color: #1e2229;
-    font-family: "Exo2-Bold", sans-serif;
-    font-size: 11px;
-  }
+
   input,
   select {
     width: 320px;
     height: 35px;
   }
+  .inputWrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    border: 1px solid #dddedf;
+    padding: 15px 20px;
+    span {
+      color: #1e2229;
+      font-family: "Exo2-Bold", sans-serif;
+      font-size: 11px;
+    }
+  }
+
   label {
     font-family: "Exo2-Regular", sans-serif;
     font-size: 16px;
@@ -262,13 +162,6 @@ input {
     background: url(../img/check-mark-blue.svg) no-repeat;
     background-size: cover;
   }
-  div {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-    border: 1px solid #dddedf;
-    padding: 15px 20px;
-  }
 
   input[type="submit"] {
     margin-top: 20px;
@@ -278,24 +171,39 @@ input {
     color: #fff;
     cursor: pointer;
   }
-}
-.confirm_label::before {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  left: 40px;
-  height: 20px;
-  width: 20px;
-  background: #ebecee;
-}
-input[type="checkbox"] {
-  display: none;
+  .confirm_label {
+    padding-top: 20px;
+    span {
+      color: #2889f0;
+    }
+    label::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      left: 40px;
+      height: 20px;
+      width: 20px;
+      background: #ebecee;
+    }
+    label::after {
+      content: "";
+      position: absolute;
+      left: 40px;
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      background: url(../img/check-mark-blue.svg) no-repeat;
+      background-size: cover;
+    }
+  }
+  input[type="checkbox"] + label::after {
+    content: none;
+  }
+  input[type="checkbox"]:checked + label::after {
+    content: "";
+  }
 }
 
-input[type="checkbox"] + label::after {
-  content: none;
-}
-
-input[type="checkbox"]:checked + label::after {
-  content: "";
+#second {
+  height: 950px;
 }
