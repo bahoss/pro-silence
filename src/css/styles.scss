@@ -110,7 +110,6 @@ input {
   position: relative;
   align-items: center;
   width: 80%;
-  height: 100%;
 }
 
 #first {
@@ -119,6 +118,7 @@ input {
   flex-wrap: wrap;
   background: url(../img/hero.jpg) no-repeat;
   background-size: cover;
+  height: 660px;
   header {
     display: flex;
     justify-content: space-between;
@@ -213,11 +213,9 @@ input {
 .form {
   display: flex;
   position: absolute;
-  right: -364px;
+  right: 0;
   bottom: -100px;
   flex-direction: column;
-  position: relative;
-
   background: #fff;
   padding: 40px;
   span {
