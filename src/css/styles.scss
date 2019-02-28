@@ -2,15 +2,19 @@
 
 .container {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   align-items: center;
   width: 80%;
 }
 
-#first {
+section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+#first {
   background: url(../img/hero.jpg) no-repeat;
   background-size: cover;
   height: 660px;
@@ -89,22 +93,21 @@
     display: flex;
     justify-content: space-between;
   }
-}
+  .advert__items {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
 
-.advert__items {
-  display: flex;
-  flex-direction: column;
-  width: 25%;
-
-  img {
-    width: 40px;
-    height: 40px;
-  }
-  span {
-    display: inline-block;
-    padding-top: 50px;
-    font-family: "Exo2-SemiBold", sans-serif;
-    font-size: 16px;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    span {
+      display: inline-block;
+      padding-top: 50px;
+      font-family: "Exo2-SemiBold", sans-serif;
+      font-size: 16px;
+    }
   }
 }
 
@@ -205,5 +208,96 @@
 }
 
 #second {
+  display: flex;
   height: 950px;
+  .offer_type {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: center;
+    padding-top: 200px;
+    li {
+      padding: 50px;
+    }
+    a {
+      font-family: "Oswald-Light", sans-serif;
+      font-size: 16px;
+      color: #888a8c;
+      text-transform: uppercase;
+    }
+
+    a:active,
+    a:hover {
+      color: #d3d4d5;
+    }
+  }
+
+  .vertical {
+    flex-direction: column;
+  }
+
+  .car_illustration {
+    position: relative;
+    height: 700px;
+    width: 100%;
+    background: linear-gradient(rgba(30, 35, 42, 0.8), rgba(30, 35, 42, 0.8)),
+      url(../img/car.png) no-repeat center;
+    font-family: "Exo2-Regular", sans-serif;
+    .car_pointer {
+      position: absolute;
+      display: flex;
+      align-items: baseline;
+      div {
+        margin-bottom: 20px;
+        margin-right: 20px;
+      }
+      &:nth-child(1) {
+        left: 10%;
+        bottom: 338px;
+      }
+      &:nth-child(2) {
+        top: 90px;
+        left: 40%;
+      }
+      &:nth-child(3) {
+        top: 133px;
+        right: 21%;
+      }
+      &:nth-child(4) {
+        div {
+          width: 100px;
+        }
+        top: 160px;
+        right: 11%;
+      }
+      &:nth-child(5) {
+        bottom: 149px;
+        left: 11%;
+      }
+      &:nth-child(6) {
+        bottom: 212px;
+        left: 36%;
+      }
+      &:nth-child(7) {
+        bottom: 144px;
+        right: 34%;
+      }
+    }
+    .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      width: 150px;
+    }
+    h3 {
+      font-size: 14px;
+      font-weight: 200;
+    }
+    span {
+      font-size: 16px;
+    }
+    .svg {
+      padding: 0 0 0 50px;
+    }
+  }
 }
