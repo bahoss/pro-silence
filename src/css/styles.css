@@ -177,7 +177,8 @@ section {
   bottom: -100px;
   flex-direction: column;
   background: #fff;
-  padding: 40px; }
+  padding: 40px;
+  z-index: 999; }
   .form input,
   .form select {
     width: 320px;
