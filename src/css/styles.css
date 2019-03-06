@@ -83,15 +83,25 @@ input[type="checkbox"] {
   display: none; }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 80%; }
 
 section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
 #first {
@@ -99,7 +109,11 @@ section {
   background-size: cover;
   height: 660px; }
   #first header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     position: relative;
     width: 100%;
@@ -108,8 +122,13 @@ section {
       position: absolute;
       left: -18px; }
     #first header .menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       width: 500px; }
       #first header .menu li {
@@ -119,25 +138,25 @@ section {
         #first header .menu li a:hover {
           color: #787d89;
           webkit-transition: all 0.5s ease-out;
-          -moz-transition: all 0.5s ease-out;
-          -ms-transition: all 0.5s ease-out;
-          -o-transition: all 0.5s ease-out;
+          -webkit-transition: all 0.5s ease-out;
           transition: all 0.5s ease-out; }
       #first header .menu li:nth-child(6) {
         margin-left: 53px; }
       #first header .menu li:nth-child(7) {
         margin-left: 85px; }
     #first header .contacts {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center; }
       #first header .contacts a {
         margin-left: 20px; }
         #first header .contacts a svg:hover {
           fill: #787d89;
           webkit-transition: all 0.5s ease-out;
-          -moz-transition: all 0.5s ease-out;
-          -ms-transition: all 0.5s ease-out;
-          -o-transition: all 0.5s ease-out;
+          -webkit-transition: all 0.5s ease-out;
           transition: all 0.5s ease-out; }
     #first header .phone_number {
       font-family: "Exo2-Medium", sans-serif;
@@ -145,8 +164,13 @@ section {
       margin-right: 20px; }
 
 .advert {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 37%;
   height: 60vh; }
@@ -155,13 +179,22 @@ section {
     font-size: 48px;
     text-transform: uppercase; }
   .advert ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between; }
   .advert .advert__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 25%; }
-    .advert .advert__items img {
+    .advert .advert__items svg {
       width: 40px;
       height: 40px; }
     .advert .advert__items span {
@@ -171,10 +204,15 @@ section {
       font-size: 16px; }
 
 .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   right: 0;
   bottom: -100px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   background: #fff;
   padding: 40px;
@@ -184,21 +222,27 @@ section {
     width: 320px;
     height: 35px; }
   .form .inputWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 15px;
     border: 1px solid #dddedf;
-    padding: 15px 20px; }
+    padding: 15px 20px;
+    position: relative; }
     .form .inputWrap span {
       color: #1e2229;
       font-family: "Exo2-Bold", sans-serif;
       font-size: 11px; }
-  .form label {
+  .form .chek_mark {
     font-family: "Exo2-Regular", sans-serif;
     font-size: 16px;
     color: #1e232a;
     margin: 10px 0 15px 50px; }
-  .form label::before {
+  .form .chek_mark::before {
     content: "";
     position: absolute;
     display: inline-block;
@@ -206,7 +250,7 @@ section {
     height: 30px;
     width: 30px;
     background: #ebecee; }
-  .form label::after {
+  .form .chek_mark::after {
     content: "";
     position: absolute;
     left: 40px;
@@ -215,6 +259,15 @@ section {
     width: 30px;
     background: url(../img/check-mark-blue.svg) no-repeat;
     background-size: cover; }
+  .form .select_chevron:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 27px;
+    right: 20px;
+    width: 23px;
+    height: 18px;
+    background: url(../img/chevron-bottom.svg) no-repeat; }
   .form input[type="submit"] {
     margin-top: 20px;
     background: #2889f0;
@@ -249,12 +302,18 @@ section {
     content: ""; }
 
 #second {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 950px; }
   #second .offer_type {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     height: 70px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center; }
     #second .offer_type li {
       padding: 50px; }
@@ -267,6 +326,9 @@ section {
     #second .offer_type a:hover {
       color: #d3d4d5; }
   #second .vertical {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column; }
   #second .car_wrap {
     width: 960px;
@@ -277,11 +339,16 @@ section {
     position: relative;
     height: 700px;
     width: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(30, 35, 42, 0.8)), to(rgba(30, 35, 42, 0.8))), url(../img/car.png) no-repeat center;
     background: linear-gradient(rgba(30, 35, 42, 0.8), rgba(30, 35, 42, 0.8)), url(../img/car.png) no-repeat center;
     font-family: "Exo2-Regular", sans-serif; }
     #second .car_illustration .car_pointer {
       position: absolute;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
       align-items: baseline; }
       #second .car_illustration .car_pointer div {
         margin-bottom: 20px;
@@ -310,8 +377,13 @@ section {
         bottom: 144px;
         right: 304px; }
     #second .car_illustration .wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
       justify-content: flex-end;
       width: 150px; }
     #second .car_illustration h3 {
@@ -341,18 +413,25 @@ section {
     left: 0; }
 
 .price_packages {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
-  margin-top: 75px; }
+  margin: 75px 0 50px 0; }
   .price_packages .block_wrap {
-    position: relative; }
+    position: relative;
+    border: 2px #353940 solid; }
+    .price_packages .block_wrap:nth-child(even) {
+      border: none; }
+  .price_packages .premium_pacckage {
+    background: #252a31; }
   .price_packages .price_packages_item {
     text-align: center;
     width: 360px;
     height: 600px;
-    font-family: "Exo2-Regular", sans-serif;
-    border: 2px #353940 solid; }
+    font-family: "Exo2-Regular", sans-serif; }
     .price_packages .price_packages_item h2 {
       font-family: "Exo2-Bold", sans-serif;
       font-size: 18px;
